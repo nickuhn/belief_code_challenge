@@ -1,0 +1,275 @@
+/*green:  2C5942*/
+/*orange: FF722b*/
+/*gray: 282828*/
+/**********
+FONTS
+**********/
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('assets/Fonts/Proxima_Nova_Bold/ProximaNovaBold.woff') format('woff'),
+       url('assets/Fonts/Proxima_Nova_Bold/ProximaNovaBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('assets/Fonts/Noto_Serif/NotoSerif-Regular.ttf');
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('assets/Fonts/Noto_Serif/NotoSerif-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('assets/Fonts/Noto_Serif/NotoSerif-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('assets/Fonts/Noto_Serif/NotoSerif-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+}
+h1, h2, h3 {
+  font-family: 'Proxima Nova Bold';
+  color: #2C5942;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+/**********
+HEADER STYLING
+**********/
+header {
+  background-image: url(assets/Images/Seattle-Hero.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  height: 610px;
+}
+.navigation {
+  background-color: #2C5942;
+  height: 85px;
+  max-width: 960px;
+  margin: auto;
+}
+.navigation nav {
+  display: inline-block;
+  float: right;
+  margin: 29px 30px;
+}
+.navigation nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+.navigation nav a:hover {
+  color: #FF722b;
+}
+.logo {
+  height: 85px;
+  width: 85px;
+}
+
+/**********
+HISTORY SECTION STYLING
+**********/
+.history {
+  max-width: 960px;
+  margin: 75px auto;
+}
+.history h1 {
+  margin-bottom: 5px;
+}
+.history p, .history a {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.history a, .neighborhoods a {
+  color: #FF722b;
+}
+.history a:hover, .neighborhoods a:hover {
+  color: #2C5942;
+}
+
+/**********
+NEIGHBORHOOD SECTION STYLING
+**********/
+.neighborhoods {
+  max-width: 960px;
+  margin: 75px auto;
+}
+.neighborhoods a {
+  text-decoration: none;
+}
+.neighborhoods h3:hover {
+  color: #FF722b;
+}
+.neighborhoods h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.hood-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hood {
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 45px;
+}
+.hood p {
+  margin-top: 0px;
+  font-size: .9em;
+  font-family: 'Proxima Nova Bold'
+}
+.neighborhoods a {
+  color: #FF722b;
+  font-size: 1.5em;
+  margin-top: 0px;
+}
+.thumbnail {
+  width: 300px;
+  height: 300px;
+}
+
+/**********
+CONTACT SECTION STYLING
+**********/
+.contact {
+  background-color: #2C5942;
+  color: #FFF;
+}
+#contact-holder {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contact h1 {
+  color: #FF722b;
+}
+#sign-up-text {
+  width: 480px;
+  margin: 45px 0px;
+}
+#sign-up-form {
+  width: 400px;
+  margin: 45px 0px 45px 25px;
+}
+.contact section p {
+  font-size: 1.4em;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.contact form {
+  width: 455px;
+  height: 250px;
+  background-color: white;
+  color: #2C5942;
+  margin-top: 50px;
+}
+.contact label {
+  width: 50px;
+  margin: 30px 15px 10px 30px;
+  text-align: left;
+  display: inline-block;
+  font-size: 1.4em;
+}
+.contact input {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #2C5942;
+  color: #000;
+}
+.contact button {
+  background-color: #FF722b;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-family: 'Proxima Nova Bold';
+  font-size: 1.6em;
+}
+.contact button:hover {
+  color: #2C5942;
+}
+
+/**********
+VIDEO SECTION STYLING
+used this tutorial for responsive iframe: http://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/;
+**********/
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**********
+FOOTER SECTION STYLING
+**********/
+
+footer {
+  background-color: #282828;
+  color: #FFF;
+  margin-top: -1px;
+  padding: 75px 25px;
+}
+.footer-holder {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer a {
+  text-decoration: none;
+}
+.footer-holder section, .social-icons {
+  width: 480px;
+}
+#footer-links {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+#footer-links a {
+  color: #FFF;
+  font-size: 1.2em;
+  margin: 5px 15px 25px 0px;
+}
+#footer-links a:hover {
+  color: #FF722b;
+}
+.footer-holder p {
+  margin: 0px;
+}
+.social-icons a {
+  font-size: 1.5em;
+  border-radius: 100%;
+  background-color: #FFF;
+  color: #282828;
+  padding: 10px 10px 5px 10px;
+  margin: 5px;
+  float: right;
+}
+.social-icons a:hover {
+  background-color: #FF722b;
+}
+
+
+
+
