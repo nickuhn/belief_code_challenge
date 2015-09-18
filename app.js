@@ -41,18 +41,18 @@ $(function() {
 
   //Mobile Menu Behavior
   $('#openMenu').on('click', function() {
-    $('#menu').css('display', 'block');
+    $('#menu').show();
     $('.navigation').css('height', '240px');
     $('header').css('height', '450px');
-    $('#openMenu').css('display', 'none');
-    $('#closeMenu').css('display', 'inline-block');
+    $('#openMenu').hide();
+    $('#closeMenu').show();
   });
   $('#closeMenu').on('click', function() {
-    $('#menu').css('display', 'none');
+    $('#menu').hide();
     $('.navigation').css('height', '85px');
     $('header').css('height', '250px');
-    $('#closeMenu').css('display', 'none');
-    $('#openMenu').css('display', 'inline-block');
+    $('#closeMenu').hide();
+    $('#openMenu').show();
   });
 
   //Contact Form Submit Behavior
@@ -72,9 +72,15 @@ $(function() {
   $('#loadMore').on('click', function() {
     //This would perform an ajax call and build the array based on the returned data.
     printHoods(listCreator(hoodNames));
-    $('#loadMore').css('display', 'none');
+    $('#loadMore').hide();
   });
 
+  $('#overlay').on('click', function() {
+    $('#overlay').hide();
+    $('#overlayPicture').hide();
+    $('iframe').show();
+    $('iframe').attr('src', "https://www.youtube.com/embed/92ISlO9U-84?rel=0&autoplay=1;showinfo=0");
+  })
   //Dummy Data would be gathered from ajax requests
   hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua';
   hoodNames = ['Ballard', 'Greenlake', 'Fremont', 'Wallingford', 'Queen Anne', 'Magnolia'];
