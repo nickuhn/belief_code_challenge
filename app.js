@@ -1,22 +1,29 @@
 $(function() {
 
-  var hoodList = [];
+  var hoodNames   = [];
   var hoodContent = '';
+  var counter     = 0;
 
   var printHoods = function(hoods) {
-    $('.hood-holder').append($('<section>')
-                      .addClass('hood')
-                      .addClass(hoods[0].name)
-                        .append($('img')
-                        .attr('src', hoods[0].imgUrl)
-                        .attr('alt', 'picture of ' + hoods[0].name)
-                        .addClass('thumbnail')));
-    $('.thumbnail').after($('<a>')
-                      .attr('href',hoods[0].name)
-                      .append($('<h3>')
-                        .text(hoods[0].name.toUpperCase())));
-    $('.' + hoods[0].name).append($('<p>').text(hoods[0].content));
-  }
+    counter = $('section').hasClass(hoods[0].name.split(' ').join('') + counter) ? counter + 1 : 0;
+    for (var i = 0; i < hoods.length; i++) {
+      var nameJoined = hoods[i].name.split(' ').join('') + counter;
+      var name = hoods[i].name;
+      $('.hood-holder').append($('<section>')
+                        .addClass('hood')
+                        .addClass(nameJoined));
+      $('.' + nameJoined).append($('<img>')
+                          .attr('src', hoods[i].imgUrl)
+                          .attr('alt', 'picture of ' + name)
+                          .addClass('thumbnail'));
+      $('.' + nameJoined).append($('<a>')
+                          .attr('href',name)
+                          .append($('<h3>')
+                          .text(name.toUpperCase())));
+      $('.' + nameJoined).append($('<p>')
+                          .text(hoods[i].content));
+    }
+  };
 
   function Neighborhood(name, imgUrl, content) {
     this.name = name;
@@ -24,24 +31,53 @@ $(function() {
     this.content = content;
   }
 
+  var listCreator = function(hoodNames) {
+    var hoodList = [];
+    for(var i = 0; i < hoodNames.length; i++) {
+      hoodList.push(new Neighborhood(hoodNames[i], 'assets/Images/' + hoodNames[i] + '.jpg', hoodContent));
+    }
+    return hoodList;
+  };
+
+  //Mobile Menu Behavior
+  $('#openMenu').on('click', function() {
+    $('#menu').css('display', 'block');
+    $('.navigation').css('height', '240px');
+    $('header').css('height', '450px');
+    $('#openMenu').css('display', 'none');
+    $('#closeMenu').css('display', 'inline-block');
+  });
+  $('#closeMenu').on('click', function() {
+    $('#menu').css('display', 'none');
+    $('.navigation').css('height', '85px');
+    $('header').css('height', '250px');
+    $('#closeMenu').css('display', 'none');
+    $('#openMenu').css('display', 'inline-block');
+  });
+
   //Contact Form Submit Behavior
   $('#submit-form').on('click', function() {
     var name = $('#name').val();
     var email = $('#email').val();
-    var city = $('#city').val()
+    var city = $('#city').val();
     $('#name').val('');
     $('#email').val('');
     $('#city').val('');
     //dummy message generation instead of sumbit to server or database
-    var message = 'Hello ' + name + ' from ' + city + '! ' + 'Thanks for giving us your email address: ' + email + '. We promise to only use it for spam!'
+    var message = 'Hello ' + name + ' from ' + city + '! ' + 'Thanks for giving us your email address: ' + email + '. We promise to only use it for spam!';
     alert(message);
   });
 
-  hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua'
-  hoodNames = ['Ballard', 'Greenlake', 'Fremont', 'Wallingford', 'Queen Anne', 'Magnolia']
+  //Load More Neighborhoods Behavior
+  $('#loadMore').on('click', function() {
+    //This would perform an ajax call and build the array based on the returned data.
+    printHoods(listCreator(hoodNames));
+    $('#loadMore').css('display', 'none');
+  });
 
-  for(var i = 0; i < hoodNames.length; i++) {
-    hoodList.push(new Neighborhood(hoodNames[i], 'assets/Images/' + hoodNames[i] + '.jpg', hoodContent));
-  }
-  printHoods(hoodList);
+  //Dummy Data would be gathered from ajax requests
+  hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua';
+  hoodNames = ['Ballard', 'Greenlake', 'Fremont', 'Wallingford', 'Queen Anne', 'Magnolia'];
+
+  printHoods(listCreator(hoodNames));
 });

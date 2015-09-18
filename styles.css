@@ -74,6 +74,15 @@ header {
   height: 85px;
   width: 85px;
 }
+#mobilePic {
+  display: none;
+}
+#openMenu {
+  display: none;
+}
+#closeMenu {
+  display: none;
+}
 
 /**********
 HISTORY SECTION STYLING
@@ -137,7 +146,10 @@ NEIGHBORHOOD SECTION STYLING
   width: 300px;
   height: 300px;
 }
-
+#loadMore {
+  cursor: pointer;
+  text-decoration: underline;
+}
 /**********
 CONTACT SECTION STYLING
 **********/
@@ -270,6 +282,114 @@ footer a {
   background-color: #FF722b;
 }
 
+/**********
+MOBILE STYLING
+**********/
+
+@media (max-width: 650px) {
+  /**********
+  Mobile Header Styling
+  **********/
+  .logo {
+    display: inline-block;
+  }
+  .navigation {
+    height: 85px;
+   /* height:240px;*/
+  }
+  #menu {
+    margin-top: 10px;
+    float: none;
+    display: none;
+    /*display: block;*/
+  }
+  .navigation a {
+    display: block;
+  }
+  header {
+    /*height: 450px;*/
+    height: 250px;
+  }
+  #mobilePic {
+    display: inline-block;
+    background-size: cover;
+    width: 100%;
+  }
+  #openMenu, #closeMenu {
+    display: inline-block;
+    float: right;
+    height: 75px;
+    width: 75px;
+    font-size: 3.5em;
+    color: #FFF;
+    background-color: #2C5942;
+    border: none;
+  }
+  #closeMenu {
+    display: none;
+  }
+  /**********
+  Mobile History Styling
+  *********/
+  h1 {
+    font-size: 2em;
+  }
+  .history p, .history a, .history h1 {
+    margin-left: 15px;
+    margin-right: 15px
+  }
+  /**********
+  Mobile Neighborhoods Styling
+  *********/
+  .hood, .neighborhoods a, .neighborhoods h1 {
+    margin-left: 15px;
+    margin-right: 15px
+  }
+  .neighborhoods h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #loadMore {
+    font-size: 1.2em;
+  }
+  /**********
+  Mobile Contact Styling
+  *********/
+  #contact-holder {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #sign-up-text {
+    margin-bottom: 0px;
+  }
+  #sign-up-form {
+    width: 300px;
+    margin: 0px 0px 45px 0px;
+  }
+  .contact form {
+    width: 285px;
+    height: 190px;
+  }
+  .contact input {
+    width: 180px;
+    margin: 15px 0px;
+  }
+  .contact label {
+    width: 65px;
+    margin: 0px 5px 0px 10px;
+  }
+
+  /**********
+  Mobile Footer Styling
+  *********/
+  .footer-holder p {
+    font-size: .9em;
+    margin-top: 5px;
+  }
+  .social-icons {
+    margin-top: 25px;
+  }
 
 
+}
 
