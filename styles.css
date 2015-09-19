@@ -1,6 +1,7 @@
 /*green:  2C5942*/
 /*orange: FF722b*/
 /*gray: 282828*/
+
 /**********
 FONTS
 **********/
@@ -125,6 +126,7 @@ NEIGHBORHOOD SECTION STYLING
   cursor: pointer;
   text-decoration: underline;
 }
+
 /**********
 CONTACT SECTION STYLING
 **********/
@@ -236,7 +238,6 @@ used this tutorial for responsive iframe: http://www.smashingmagazine.com/2014/0
 /**********
 FOOTER SECTION STYLING
 **********/
-
 footer {
   background-color: #282828;
   color: #FFF;
@@ -407,7 +408,5 @@ MOBILE STYLING
     margin-left: 0px;
     float: left;
   }
-
-
 }
 

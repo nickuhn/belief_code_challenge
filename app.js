@@ -26,8 +26,8 @@ $(function() {
   };
 
   function Neighborhood(name, imgUrl, content) {
-    this.name = name;
-    this.imgUrl = imgUrl;
+    this.name    = name;
+    this.imgUrl  = imgUrl;
     this.content = content;
   }
 
@@ -57,9 +57,9 @@ $(function() {
 
   //Contact Form Submit Behavior
   $('#submit-form').on('click', function() {
-    var name = $('#name').val();
+    var name  = $('#name').val();
     var email = $('#email').val();
-    var city = $('#city').val();
+    var city  = $('#city').val();
     $('#name').val('');
     $('#email').val('');
     $('#city').val('');
@@ -79,8 +79,8 @@ $(function() {
     $('#overlay').hide();
     $('#overlayPicture').hide();
     $('iframe').show();
-    $('iframe').attr('src', "https://www.youtube.com/embed/92ISlO9U-84?rel=0&autoplay=1;showinfo=0");
-  })
+    $('iframe').attr('src', 'https://www.youtube.com/embed/92ISlO9U-84?rel=0&autoplay=1;showinfo=0');
+  });
   //Dummy Data would be gathered from ajax requests
   hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua';
   hoodNames = ['Ballard', 'Greenlake', 'Fremont', 'Wallingford', 'Queen Anne', 'Magnolia'];
