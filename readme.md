@@ -1,5 +1,6 @@
 #Visit Seattle Code Challenge
 
+####[See it live on my portfolio page!](http://nickuhn.net/visit_seattle/index.html)
 [Click Here For Code Challenge Source](https://github.com/belief/BeliefAgencyCodeChallenge)
 
 Using a supplied .pdf of the proposed layout I created a functioning website that matches closely.
