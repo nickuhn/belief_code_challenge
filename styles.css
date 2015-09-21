@@ -109,14 +109,14 @@ NEIGHBORHOOD SECTION STYLING
   margin-bottom: 45px;
 }
 .hood p {
-  margin-top: 0px;
+  margin-top: 0;
   font-size: 1.1em;
-  font-family: 'Noto Sans'
+  font-family: 'Noto Sans';
 }
 .neighborhoods a {
   color: #FF722b;
   font-size: 1.5em;
-  margin-top: 0px;
+  margin-top: 0;
 }
 .thumbnail {
   width: 300px;
@@ -147,11 +147,11 @@ CONTACT SECTION STYLING
 }
 #sign-up-text {
   width: 480px;
-  margin: 45px 0px;
+  margin: 45px 0;
 }
 #sign-up-form {
   width: 400px;
-  margin: 45px 0px 45px 25px;
+  margin: 45px 0 45px 25px;
 }
 .contact section p {
   font-size: 1.4em;
@@ -161,7 +161,7 @@ CONTACT SECTION STYLING
 .contact form {
   width: 455px;
   height: 250px;
-  background-color: white;
+  background-color: #FFFFFF;
   color: #2C5942;
   margin-top: 50px;
 }
@@ -229,7 +229,7 @@ used this tutorial for responsive iframe: http://www.smashingmagazine.com/2014/0
 .video iframe {
   display: none;
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -264,13 +264,13 @@ footer a {
 #footer-links a {
   color: #FFF;
   font-size: 1.2em;
-  margin: 5px 15px 25px 0px;
+  margin: 5px 15px 25px 0;
 }
 #footer-links a:hover {
   color: #FF722b;
 }
 .footer-holder p {
-  margin: 0px;
+  margin: 0;
 }
 .social-icons a {
   border-radius: 100%;
@@ -301,19 +301,16 @@ MOBILE STYLING
   }
   .navigation {
     height: 85px;
-   /* height:240px;*/
   }
   #menu {
     margin-top: 10px;
     float: none;
     display: none;
-    /*display: block;*/
   }
   .navigation a {
     display: block;
   }
   header {
-    /*height: 450px;*/
     height: 250px;
   }
   #mobilePic {
@@ -342,18 +339,18 @@ MOBILE STYLING
   }
   .history p, .history a, .history h1 {
     margin-left: 15px;
-    margin-right: 15px
+    margin-right: 15px;
   }
   /**********
   Mobile Neighborhoods Styling
   *********/
   .hood, .neighborhoods a, .neighborhoods h1 {
     margin-left: 15px;
-    margin-right: 15px
+    margin-right: 15px;
   }
   .neighborhoods h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   #loadMore {
     font-size: 1.2em;
@@ -366,11 +363,11 @@ MOBILE STYLING
     margin-right: 15px;
   }
   #sign-up-text {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   #sign-up-form {
     width: 300px;
-    margin: 0px 0px 45px 0px;
+    margin: 0 0 45px 0;
   }
   .contact form {
     width: 285px;
@@ -378,11 +375,11 @@ MOBILE STYLING
   }
   .contact input {
     width: 180px;
-    margin: 15px 0px;
+    margin: 15px 0;
   }
   .contact label {
     width: 65px;
-    margin: 0px 5px 0px 10px;
+    margin: 0 5px 0 10px;
   }
   /**********
   Mobile Video Styling
@@ -402,10 +399,10 @@ MOBILE STYLING
   }
   .social-icons {
     margin-top: 25px;
-    margin-left: 0px;
+    margin-left: 0;
   }
   .social-icons a {
-    margin-left: 0px;
+    margin-left: 0;
     float: left;
   }
 }

@@ -12,15 +12,16 @@ $(function() {
       $('.hood-holder').append($('<section>')
                         .addClass('hood')
                         .addClass(nameJoined));
-      $('.' + nameJoined).append($('<img>')
+      var $current = $('.' + nameJoined);
+      $current.append($('<img>')
                           .attr('src', hoods[i].imgUrl)
                           .attr('alt', 'picture of ' + name)
                           .addClass('thumbnail'));
-      $('.' + nameJoined).append($('<a>')
+      $current.append($('<a>')
                           .attr('href',name)
                           .append($('<h3>')
                           .text(name.toUpperCase())));
-      $('.' + nameJoined).append($('<p>')
+      $current.append($('<p>')
                           .text(hoods[i].content));
     }
   };
@@ -29,7 +30,7 @@ $(function() {
     this.name    = name;
     this.imgUrl  = imgUrl;
     this.content = content;
-  }
+  };
 
   var listCreator = function(hoodNames) {
     var hoodList = [];
@@ -81,8 +82,9 @@ $(function() {
     $('iframe').show();
     $('iframe').attr('src', 'https://www.youtube.com/embed/92ISlO9U-84?rel=0&autoplay=1;showinfo=0');
   });
+
   //Dummy Data would be gathered from ajax requests
-  hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua';
+  hoodContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.';
   hoodNames = ['Ballard', 'Greenlake', 'Fremont', 'Wallingford', 'Queen Anne', 'Magnolia'];
 
   printHoods(listCreator(hoodNames));
